@@ -1,10 +1,4 @@
 # MalduinoW-Scripts
-Various useful scripts for the Malduino W
-
-
-
-
-# MalduinoW-Scripts
 
 ![N|Solid](https://i.imgur.com/E5ltGFC.png)
 
