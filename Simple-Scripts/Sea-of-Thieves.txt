@@ -1,0 +1,8 @@
+REM ------------------Just starting Sea of Thieves
+REM Change this to what ever your keyboard layout is
+LOCALE DK
+WINDOWS
+DELAY 500
+STRING Sea of Thieves
+DELAY 500
+ENTER
