@@ -1,0 +1,13 @@
+REM Change this to what ever your keyboard layout is
+LOCATE DK
+
+REM -------------open command prompt with admin privileges
+LED 250 250 250
+WINDOWS r
+DELAY 250
+STRING POWERSHELL
+CTRL SHIFT ENTER
+DELAY 1000
+LEFT
+DELAY 500
+ENTER
