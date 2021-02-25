@@ -2,7 +2,8 @@
 
 ![N|Solid](https://i.imgur.com/E5ltGFC.png)
 
-Various useful scripts for the Malduino W
+Various useful scripts for the Malduino W.
+I just made this rep, so it's pretty simple right now. I will keep updating! :)
 
 This repository is made just to store my most useful scripts, made by me and various scripts I find online.
 
