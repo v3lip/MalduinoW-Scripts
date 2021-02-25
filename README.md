@@ -15,7 +15,7 @@ BTC Address: bc1qzy43fdpqryr0980f7qa7f0jq6tv7jh05zahecg
 ![N|Solid](https://i.imgur.com/gSTg1Jk.png)
 
 
-### Development
+## Development
 
 Want to contribute? Great!
 Keep em' coming and I'll take a look at em'!
