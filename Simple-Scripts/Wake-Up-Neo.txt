@@ -1,0 +1,45 @@
+REM Change this to what ever your keyboard layout is
+LOCATE DK
+
+DELAY 2000
+REM -------------open command prompt with admin privileges
+LED 0 250 0
+WINDOWS r
+DELAY 500
+STRING CMD
+ENTER
+DELAY 250
+WINDOWS UP
+DELAY 250
+
+REM -------------terminal message
+DEFAULTDELAY 25
+STRING title The Matrix
+ENTER
+STRING color a
+ENTER
+STRING cls
+ENTER
+DEFAULTDELAY 200
+STRING w
+STRING a
+STRING k
+STRING e
+SPACE
+STRING u
+STRING p
+SPACE
+STRING n
+STRING e
+STRING o
+.
+.
+.
+DEFAULTDELAY 125
+DELAY 5000
+ENTER
+STRING TREE
+ENTER
+DELAY 3000
+STRING exit
+ENTER
