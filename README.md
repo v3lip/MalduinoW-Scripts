@@ -7,7 +7,7 @@
 Various useful scripts for the Malduino W.
 I just made this rep, so it's pretty simple right now. I will keep updating!
 
-**NOTE:** I am norwegian. By this I mean I have a norwegian keyboard layout, therefore I use the ´´´LOCALE DK´´´ function. You may have to change that function to something that fits your layout.
+**NOTE:** I am norwegian. By this I mean I have a norwegian keyboard layout, therefore I use the `LOCALE DK` function so that the scripts fit my keyboard layout. You may have to change that function to something that fits your layout. Thanks.
 
 This repository is made just to store my most useful scripts, made by me and various scripts I find online.
 ## Donate
