@@ -5,7 +5,9 @@
 ![N|Solid](https://i.imgur.com/E5ltGFC.png)
 
 Various useful scripts for the Malduino W.
-I just made this rep, so it's pretty simple right now. I will keep updating! :)
+I just made this rep, so it's pretty simple right now. I will keep updating!
+
+**NOTE:** I am norwegian. By this I mean I have a norwegian keyboard layout, therefore I use the ´´´LOCALE DK´´´ function. You may have to change that function to something that fits your layout.
 
 This repository is made just to store my most useful scripts, made by me and various scripts I find online.
 ## Donate
