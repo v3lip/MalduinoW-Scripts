@@ -1,4 +1,5 @@
 # MalduinoW-Scripts
+![N|Solid](https://img.shields.io/github/last-commit/v3lip/MalduinoW-Scripts)
 
 ![N|Solid](https://i.imgur.com/E5ltGFC.png)
 
